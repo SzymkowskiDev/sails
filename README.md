@@ -7,7 +7,7 @@
 ![Image of the map](https://github.com/SzymkowskiDev/sails/blob/main/demo.gif?raw=true)
 
 ## 🚧 Warning / How to run
-Supply CSV data sile to directory data/ to run the application. Due to GitHub's limit on the file size, I wasn't able to upload the dataset.
+Supply CSV data file to directory data/ to run the application, name the file "ships". Due to GitHub's limit on the file size, I wasn't able to upload the dataset.
 
 ## 📦 Packages
 - library(shiny)           # Web development framework
