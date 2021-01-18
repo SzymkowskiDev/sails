@@ -1,0 +1,61 @@
+---
+title: "Exploratory Data Analysis"
+author: "Kamil Szymkowski"
+date: "15/01/2021"
+output:
+  html_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data file
+
+```{r file, echo = FALSE}
+ships <- read.csv("./ships.csv")
+class(ships)
+utils:::format.object_size(file.info("./ships.csv")$size, "auto")
+dim(ships)
+```
+
+The `ships.csv` is an example of a large dataset. The file takes up 129 MB on the disk and consists of over 1 million cases. Each case is described using 20 variables.
+
+
+## Variables
+```{r head, echo = FALSE}
+head(ships)
+```
+
+The variables can be grouped into the following categries:
+
+* Static information:
+  + SHIP_ID - ship’s unique identifier
+  + SHIPNAME - ship’s name
+  + SHIPTYPE - ship’s type
+  + Ship_type - ship’s type from SHIPTYPE
+  + WIDTH - ship’s width in meters
+  + LENGTH - ship’s length in meters
+  + FLAG - ship’s flag
+  + DWT - ship’s deadweight in tones
+* Dynamic information:
+  + LAT - ship’s latitude
+  + LON - ship’s longitude
+  + DATETIME - date and time of the observation
+  + Date - date extracted from DATETIME
+  + Week_nb - week number extracted from date
+  + COURSE - ship’s course as angle
+  + SPEED - ship’s speed in knots
+  + HEADING - ship’s compass direction
+  + Is_parked - indicator whether the ship is moving or not 
+  + DESTINATION - ship’s destination (reported by the crew)
+  + PORT - current port reported by the vessel
+  + Port - current port assigned based on the ship’s location
+
+
+```{r variables}
+str(ships)
+summary(ships)
+```
+

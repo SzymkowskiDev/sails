@@ -1,0 +1,24 @@
+Package: sail
+Type: Package
+Title: Longest Sail
+Version: 0.1.0
+Author: Kamil Szymkowski
+Maintainer: <szymkowski.k@gmail.com>
+Description: Submission work to Appsilon
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Config/testthat/edition: 3
+Imports: 
+    shiny,
+    shiny.semantic,
+    leaflet,
+    stringr,
+    dplyr,
+    geosphere,
+    leaflet.extras,
+    waiter,
+    reactlog,
+    testthat,
+    shinyloadtest,
+    magrittr
